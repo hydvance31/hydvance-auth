@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hydvance-auth"
+version = "1.1.0"
+description = "Verifies the identity the Hydvance portal forwards to its applications; per-user configuration files."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["pyjwt>=2.8", "cryptography>=42"]
+
+[project.optional-dependencies]
+streamlit = ["streamlit>=1.37"]
+test = ["pytest>=8"]
+
+[tool.setuptools]
+packages = ["hydvance_auth"]
